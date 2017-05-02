@@ -13,10 +13,12 @@ end
 
 puts "-" * 40
 
-grid[0][0] = "a" # defining which cells are alive
-grid[1][1] = "a"
+colony = [grid[0][0..2],grid[1][0..2], grid[2][0..2]] #defning colony
 
-colony = [grid[0][0..2],grid[1][0..2], grid[2][0..2]]
+colony[0][0] = "a" # defining which cells are alive
+colony[1][1] = "a"
+colony[2][2] = "a"
+
 puts "Colony:"
 colony.each do |x|
   print "#{x}\n"
