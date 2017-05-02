@@ -8,6 +8,12 @@ We'll call this 2d array the "grid." As per the assignment, the size of this gri
 
 Within this grid, there will be an initial colony, a randomly generated 3x3 square.
 
-Each square of the colony will have a value of either "dead" or "alive."
+Each square of the colony will have a value of either dead (0) or alive ("a")
+
+The program assesses the value of each cell in the colony and determines whether or not the primary_cell will live into the next generation based on the following rules:
+	1. Any live cell with fewer than two live neighbours dies, as if caused by underpopulation.
+	2. Any live cell with two or three live neighbours lives on to the next generation.
+	3. Any live cell with more than three live neighbours dies, as if by overpopulation.
+	4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 
 
