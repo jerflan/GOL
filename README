@@ -1,0 +1,13 @@
+README
+
+The purpose of this repo is to show my journey in trying to design and build the Game of Life of John Horton Conway fame in a simple ruby environment.
+
+So far I've concluded that I need to design the game based a 2d array that houses the actions in the code. 
+
+We'll call this 2d array the "grid." As per the assignment, the size of this grid will be based on standard user input.
+
+Within this grid, there will be an initial colony, a randomly generated 3x3 square.
+
+Each square of the colony will have a value of either "dead" or "alive."
+
+
