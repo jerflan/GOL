@@ -31,7 +31,8 @@ puts "-" * 40
 
 puts "How many cells in the colony are alive?"
 
-def alive_count(colony)
+
+def alive_count(colony) #need another method if primary_cell != "a"
   alive = 0
   colony.each_index do  |x| # assessing the value of each cell
     colony[x].each_index do |y|
@@ -43,31 +44,44 @@ def alive_count(colony)
       end
     end
   end
+  alive -= 1 # removing primary_cell
 puts "Number of Alive Cells: #{alive}"
+return alive
 end
 
-alive_count(colony)
-puts alive
+cells_alive = alive_count(colony) # defining alive
+
+
+puts "-" * 40
+
+if cells_alive == 2 || cells_alive == 3
+  primary_cell = 0
+  puts "Primary Cell is alive"
+else
+  puts "Primary Cell is dead."
+end
 
 puts "-" * 40
 
 
 
-puts "-" * 40
 
-grid.each_index do |x|
-  if x < 3
-    grid[x].each_index do |y|
-      if y < 3
-        puts grid[x][y] #calls the value of the coordinate in the colony
-      else
-        break
-      end
-    end
-  else
-    break
-  end
-end
+
+# All my work is below, most recent is first!
+
+# grid.each_index do |x|
+#   if x < 3
+#     grid[x].each_index do |y|
+#       if y < 3
+#         puts grid[x][y] #calls the value of the coordinate in the colony
+#       else
+#         break
+#       end
+#     end
+#   else
+#     break
+#   end
+# end
 
 
 # ma = [
