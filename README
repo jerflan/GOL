@@ -53,8 +53,12 @@ Matrix Attempt
       ```ruby
       count == 3 || count == 4 && @board[idx / width, idx % width] == 1 ? 1 : 0
       ```
+    5. Installed toilet to create a more graphical introduction.
+    6. Employed emoji's for the world display using unicodes.
+    7. Incorporated a Thread instance to allow user to stop the program without ^C.
 
   Intended Features
-    1. Get user input to stop without exiting the program.
-    2. Create the option for allowing user to input particular patterns that generate certain results
-    3. Track ecah generation
+    1. Create the option for allowing user to input particular patterns that generate certain results
+    2. Track ecah generation
+    3. Allow user to select display "themes."
+

@@ -4,6 +4,8 @@
 # If you don't want to the ridiculous fun times output, please run jflan_gol_basic.rb instead.
 # This program is very strongly based off the following:
 # https://codereview.stackexchange.com/questions/25850/ruby-game-of-life-with-matrices
+# Larger boards (40x40, 60x60) work better, as do middle population densities (4-6).
+# These combos give a great combination of gliders, blinkers, and pulsars.
 ################################################################################
 
 ################################################################################
@@ -62,7 +64,7 @@ Note: Choosing 1 will basically yield a dystopian tragedy and everyone will die 
     EOF
     population_density = gets.chomp.to_i
     puts "Type 'x' and hit ENTER at any time to destroy your world. #youmonster "
-# As per the Thread instance on rb. 123-128
+# As per the Thread instance on rb. 138-143
     sleep(2)
     puts "Scraping locker rooms . . ."
     sleep(2)
@@ -78,7 +80,7 @@ Note: Choosing 1 will basically yield a dystopian tragedy and everyone will die 
     system("clear")
     system("toilet --filter gay LET THERE")
     system("toilet --filter gay BE LYFE!")
-    sleep (0.5)
+    sleep (2)
     system("clear")
     world = Matrix.build(size) {rand(population_density) == 0 ? 1 : 0}
   # instantiates the [modified] Matrix class with the user input size as the dimensions
@@ -91,7 +93,7 @@ Note: Choosing 1 will basically yield a dystopian tragedy and everyone will die 
   # instantiates the World Class
   end
 
-  def to_s #overrides to_s to use with puts world (rb. 133)
+  def to_s #overrides to_s to use with puts world (rb. 148)
     @world.row_vectors.map do |row|
       row.map do |cell|
         cell == 1 ? "\u{1f4a5}" : "\u{26ab}"
@@ -128,9 +130,9 @@ end #end of class
 
 
 
-##########################################################
-#################### PROGRAM STARTS HERE #################
-##########################################################
+################################################################################
+############################ PROGRAM STARTS HERE ###############################
+################################################################################
 
 new_world = World.create_world
 #instantiates the class with user input for the necessary arguments.
@@ -163,6 +165,7 @@ end
 # Can I separate out the user input section and class instantiation into design_world and create_world methods?
 # Can I be more efficient with the user input section using blocks and loops?
 # Is there a better way to get the population_density?
+# Larger boards tend to completely "refresh" more often. How do I make this smoother?
 ################################################################################
 
 

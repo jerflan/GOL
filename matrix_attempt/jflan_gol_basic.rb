@@ -1,6 +1,8 @@
 ################################################################################
 # This program is very strongly based off the following:
 # https://codereview.stackexchange.com/questions/25850/ruby-game-of-life-with-matrices
+# Larger boards (40x40, 60x60) work better, as do middle population densities (4-6).
+# These combos give a great combination of gliders, blinkers, and pulsars.
 ################################################################################
 
 require 'Matrix'
@@ -52,7 +54,7 @@ Note: Choosing 1 will basically yield a dystopian tragedy and everyone will die 
       sleep(1)
     end
     puts "LET THERE BE LYFE!"
-    sleep (0.5)
+    sleep (2)
     system("clear")
     world = Matrix.build(size) {rand(population_density) == 0 ? 1 : 0}
     new(world)
@@ -82,9 +84,9 @@ end
 
 
 
-##########################################################
-#################### PROGRAM STARTS HERE #################
-##########################################################
+################################################################################
+############################ PROGRAM STARTS HERE ###############################
+################################################################################
 
 new_world = World.create_world
 
