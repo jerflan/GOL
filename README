@@ -46,9 +46,9 @@ Matrix Attempt
     1. Able to specify world size through standard user input
     2. Users can determine population density that triggered by a ternary operator statement
     
-      ```
-      Matrix.build(size) { rand(population) == 0 ? 1 : 0 }
-      ```
+```ruby
+Matrix.build(size) { rand(population) == 0 ? 1 : 0 }
+```
       
     3. Neighbor counts are determined by "stacking" and reducing each matrix vector.
     4. Game rules truncated to 2 options:
