@@ -34,12 +34,15 @@ Array Attempt
 Class Attempt
   Successes:
     1. Create a 2d array that randomly assigns life status to each cell
+    2. Allows user to set world dimensions, initial population density, and live cell style.
+    3. World respects array bounds and doesn't "wrap" as in the Matrix option.
 
   Failures:
-    1. Unable to apply previous colony/neighbor logic to all cells
+    1. Unable to initiate user input as a method inside the class.
 
   Upon Revisit:
-    1. Develop both a single class and double class approach
+    1. Experiment with a second class to keep all methods inside the classes.
+    2. Implement user options to set specific population that yield the desired patterns
 
 Matrix Attempt
   Successes:
@@ -57,7 +60,10 @@ Matrix Attempt
     6. Employed emoji's for the world display using unicodes.
     7. Incorporated a Thread instance to allow user to stop the program without ^C.
 
-  Intended Features
+  Failures:
+    1. Neighbor Count does not respect array bounds and "wraps" to the opposite bound.
+
+  Upon Revisit:
     1. Create the option for allowing user to input particular patterns that generate certain results
     2. Track ecah generation
     3. Allow user to select display "themes."
