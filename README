@@ -48,14 +48,18 @@ Matrix Attempt
   Successes:
     1. Able to specify world size through standard user input
     2. Users can determine population density that triggered by a ternary operator statement
-      ```ruby
-      Matrix.build(size) { rand(population) == 0 ? 1 : 0 }
-      ```
+    
+```
+Matrix.build(size) { rand(population) == 0 ? 1 : 0 }
+```
+      
     3. Neighbor counts are determined by "stacking" and reducing each matrix vector.
     4. Game rules truncated to 2 options:
-      ```ruby
-      count == 3 || count == 4 && @board[idx / width, idx % width] == 1 ? 1 : 0
-      ```
+    
+```
+count == 3 || count == 4 && @board[idx / width, idx % width] == 1 ? 1 : 0
+```
+      
     5. Installed toilet to create a more graphical introduction.
     6. Employed emoji's for the world display using unicodes.
     7. Incorporated a Thread instance to allow user to stop the program without ^C.
